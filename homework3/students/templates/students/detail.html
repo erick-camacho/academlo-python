@@ -12,7 +12,7 @@
         <li>Address: {{ student.address }}</li>
         <li>Phone: {{ student.phone }}</li>
         <li>Courses:
-            {% for course in student.courses.all %}
+            {% for course in courses.all %}
                 {{ course.name }}
             {% endfor %}
         </li>
