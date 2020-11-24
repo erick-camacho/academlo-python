@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+</head>
+<body>
+    <h1>Student List</h1>
+    <h3>Click the student name to show their information</h3>
+    {% if students %}
+        <ul>
+        {% for student in students %}
+            <li><a href="/students/{{ student.id }}">{{ student.name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No students are available.</p>
+    {% endif %}
+</body>
+</html>
